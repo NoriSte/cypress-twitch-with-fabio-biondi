@@ -5,11 +5,11 @@
 This is the [reference repository](https://github.com/NoriSte/cypress-twitch-with-fabio-biondi) with all the contents and the examples of the Twitch episode with Fabio Biondi.
 
 We are going to walk through
-- a basic E2E test for the signup flow
-- an optimized version of the previous test
-- a basic UI Integration Test (an E2E test without a working server) test for the signup flow
-- some basic Unit tests on a React component
-- some basic Unit tests on a React hook
+- a [basic E2E test](./cypress/integration/exercises/1-e2e-tests/signup.e2e.spec.js) for the signup flow
+- an [optimized version of the previous test](./cypress/integration/exercises/1-e2e-tests/custom-command.e2e.spec.js)
+- a [basic UI Integration Test](./cypress/integration/exercises/2-ui-integration-tests/signup.integration-spec.js) (an E2E test without a working server) test for the signup flow
+- some basic [Unit tests on a React component](./components/3-component-tests/basic.component.spec.jsx)
+- some basic [Unit tests on a React hook](./components/4-hook-tests/toggle.hook.spec.jsx)
 
 ## Environment
 
