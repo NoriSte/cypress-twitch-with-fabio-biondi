@@ -1,0 +1,70 @@
+{
+  "name": "cypress-twitch-with-fabio-biondi",
+  "version": "1.0.0",
+  "description": "Cypress - Twitch with Fabio Biondi",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run realworld:install",
+    "test": "start-server-and-test realworld:start http://localhost:4100 test:everything",
+    "test:smoke": "start-server-and-test realworld:start http://localhost:4100 realworld:cy",
+    "test:everything": "npm run realworld:cy && npm run run:exercises",
+    "// CYPRESS ///////////": "",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy-run-record": "node utils/cy-run-record.js",
+    "// REALWORLD ///////////": "",
+    "realworld:install": "npm run realworld:frontend:install",
+    "realworld:frontend:install": "cd realworld/frontend && npm i",
+    "realworld:start": "npm run realworld:frontend:start",
+    "realworld:frontend:start": "cd realworld/frontend && npm start",
+    "realworld:cy": "npm run cy-run-record -- --spec \"cypress/integration/realworld/**/*\"",
+    "// EXERCISES ///////////": "",
+    "run:exercises": "npm-run-all -s exercises:**",
+    "exercises:e2e": "npm run cy-run-record -- --spec \"cypress/integration/exercises/1-e2e-tests/*.solution.*\"",
+    "exercises:ui-integration": "npm run cy-run-record -- --spec \"cypress/integration/exercises/2-ui-integration-tests/*.solution.*\"",
+    "exercises:component": "npm run cy-run-record -- --spec \"components/3-component-tests/*.solution.*\"",
+    "exercises:hook": "npm run cy-run-record -- --spec \"components/4-hook-tests/*.solution.*\"",
+    "exercises:unit": "npm run cy-run-record -- --spec \"cypress/integration/exercises/5-unit-tests/*.solution.*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoriSte/cypress-twitch-with-fabio-biondi.git"
+  },
+  "keywords": [
+    "course",
+    "testing",
+    "react-testing",
+    "e2e"
+  ],
+  "author": "Stefano Magni <nori.ste.magni@gmail.com> (https://github.com/NoriSte)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoriSte/cypress-twitch-with-fabio-biondi/issues"
+  },
+  "homepage": "https://github.com/NoriSte/cypress-twitch-with-fabio-biondi#readme",
+  "devDependencies": {
+    "@cypress/react": "^4.16.4",
+    "@testing-library/cypress": "7.0.1",
+    "concurrently": "5.3.0",
+    "cross-env": "7.0.2",
+    "cypress": "^6.8.0",
+    "cypress-wait-until": "^1.7.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "expect": "^26.6.2",
+    "npm": "6.14.8",
+    "npm-run-all": "4.1.5",
+    "prettier": "^2.1.2",
+    "react-dom": "^17.0.2",
+    "start-server-and-test": "1.11.5"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-smooth-scrollbar": "^8.0.6",
+    "smooth-scrollbar": "^8.6.1",
+    "styled-components": "^5.2.1"
+  }
+}

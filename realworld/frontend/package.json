@@ -1,0 +1,44 @@
+{
+  "name": "react-redux-realworld-example-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "cross-env": "7.0.2",
+    "react-scripts": "3.4.4",
+    "nan": "2.14.2"
+  },
+  "dependencies": {
+    "history": "5.0.0",
+    "marked": "1.2.2",
+    "prop-types": "15.7.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-redux": "5.1.1",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
+    "react-router-redux": "5.0.0-alpha.9",
+    "redux": "4.0.5",
+    "redux-devtools-extension": "2.13.8",
+    "redux-logger": "3.0.6",
+    "superagent": "6.1.0",
+    "superagent-promise": "1.1.0"
+  },
+  "scripts": {
+    "start": "cross-env PORT=4100 BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
